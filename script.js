@@ -266,27 +266,33 @@ slider.oninput = function() {
     $(this).parent().slideToggle()
     if ($(this).index() == 0){
      rescale(2,5)
+     $(".scale-name").text($(this).text())
     }
 
     if ($(this).index() == 1){
       rescale(10,10)
+      $(".scale-name").text($(this).text())
     }
 
     if ($(this).index() == 2){
       rescale(20,20)
+      $(".scale-name").text($(this).text())
     }
 
 
     if ($(this).index() == 3){
       rescale(20,50)
+      $(".scale-name").text($(this).text())
     }
 
     if ($(this).index() == 4){
       rescale(20,100)
+      $(".scale-name").text($(this).text())
     }
 
     if ($(this).index() == 5){
       rescale(100,100)
+      $(".scale-name").text($(this).text())
     }
 
     
