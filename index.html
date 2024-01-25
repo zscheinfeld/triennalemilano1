@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visualizing Inequalities</title>
+    <link rel="icon" type="image/x-icon" href="favicon-96x96.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>  
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+	<script src="script.js"></script>
+
+  <div class="interface">
+    <div class = "left-column">
+      <div class="header">
+        Visualizing<br>Inequalities
+      </div>
+
+      <div class="metrics-container">
+        <div class="metric-group">
+        <div class="metrics-title">Metric</div>
+        <div class="metric color">Choose Metric</div>
+        <div class="metric-option-container">
+          <div class="metric-option income" id="1-inequality">Economics</div>
+          <div class="metric-option housing" id="2-inequality">
+            Human Health & Wellbeing
+          </div>
+          <div class="metric-option poverty" id="3-inequality">
+            Climate & Enviornment</div>
+          <div class="metric-option women" id="4-inequality">
+            Urban Development
+          </div>
+          <div class="metric-option pollution" id="5-inequality">
+            Gender and Sexuality
+          </div>
+          <div class="metric-option waste" id="6-inequality">
+            Education
+          </div>
+          <!-- <div class="metric-option war" id="7-inequality">
+            War and Social Strife
+          </div> -->
+        </div>
+        <div class="category-description">
+          
+        </div>
+        </div>
+
+        <div class="metric-group">
+          <div class="metrics-title">Country</div>
+          <div class="metric" id="country-name-menu">Choose Country</div>
+          <div class="metric-option-container" id="country-container">
+
+          </div>
+        </div>
+
+        <div class="metric-group">
+          <div class="metrics-title">Scale</div>
+          <div class="metric">Choose Scale</div>
+          <div class="metric-option-scale-container">
+            <div class="metric-option-scale" id="1-scale">Per 10 People</div>
+            <div class="metric-option-scale" id="2-scale">
+              per 100 People
+            </div>
+            <div class="metric-option-scale" id="3-scale">
+              per 400 People
+            </div>
+            <div class="metric-option-scale" id="4-scale">
+              per 1,000 People
+            </div>
+            <div class="metric-option-scale" id="5-scale">
+              per 2,000 People
+            </div>
+            <div class="metric-option-scale" id="6-scale">
+              per 10,000 People
+            </div>
+          </div>
+        </div>
+
+        <div class="metric-group">
+          <div class="metrics-title">Shuffle:<span id="shuffleval"></span></div>
+          <div class="slidecontainer">
+            <input type="range" min=".5" max="1" value="1" class="slider" id="myRange" step="0.01">
+          </div>
+     
+        </div>
+
+        <!-- <div class="metric-group">
+          <div class="metrics-title">Display</div>
+          <div class="metric">
+          Grid</div>
+          <div class="metric-option-container">
+            <div class="metric-option" id="1-display">Grid</div>
+            <div class="metric-option" id="2-display">
+              Topographic
+            </div>
+            <div class="metric-option" id="3-display">
+              Radial
+            </div>
+            <div class="metric-option" id="4-display">
+             Dots
+            </div>
+        </div>
+        </div> -->
+
+      </div>
+      
+    </div>
+    <div id='sketch-container'>
+      <div class="caption-container">
+        <span class="metric-explainer">The amount of <span class="tag color color-name">yellow</span> shown in this chart represents</span> 
+        <span class="country-specific-type">the <span class="income-percent"></span>%</span> 
+        <span class="metric-explainer"><span class="tag color inequality-type">Income Inequality</span></span> 
+        <span class="country-specific-type">in <span class="tag country color"></span></span>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+  </body>
+</html>

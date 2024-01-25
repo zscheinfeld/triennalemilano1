@@ -1,0 +1,273 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#sketch-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:60%;
+    background-color: #F3F3F3;
+    flex-direction: column;
+}
+
+.left-column{
+    height: 100%;
+    width:40%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    
+
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; 
+}
+
+.interface{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+
+.header{
+    font-family: "Roboto Serif", serif;
+    font-size: 52px;
+    line-height: 90%;
+}
+
+.metrics-container{
+    margin-top: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.metrics-title{
+   font-family: "Roboto Mono", monospace;
+   font-size: 12px;
+}
+
+.metric{
+    margin-top: 8px;
+    display: inline-block;
+    font-family: "Roboto Serif", serif;
+    font-size: 24px;
+    line-height: 120%;
+    background-color: #C9C9C9;
+    padding-left:10px;
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-right:10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.metric:hover{
+    
+    background-color: black;
+    color: white;
+   
+}
+
+.metric-option-container{
+    position: absolute;
+    display: none;
+    background-color: #F3F3F3;
+    margin-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 32px;
+    border-radius: 8px;
+    height: 240px;
+    overflow-y: scroll;
+    z-index: 5;
+}
+
+
+.metric-option{
+    margin-top: 8px;
+    font-family: "Roboto Serif", serif;
+    font-size: 24px;
+    line-height: 120%;
+    background-color: #C9C9C9;
+    padding-left:10px;
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-right:10px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+ 
+}
+
+.metric-option-scale-container{
+    position: absolute;
+    display: none;
+    background-color: #F3F3F3;
+    margin-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 120px;
+    border-radius: 8px;
+    height: 240px;
+    overflow-y: scroll;
+    z-index: 5;
+}
+
+.metric-option-scale{
+    margin-top: 8px;
+    font-family: "Roboto Serif", serif;
+    font-size: 24px;
+    line-height: 120%;
+    background-color: #C9C9C9;
+    padding-left:10px;
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-right:10px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+}
+
+.metric-option-scale:hover{
+    background-color: black;
+    color: white;
+}
+
+
+.metric-option:hover{
+    background-color: black;
+    color: white;
+}
+
+.income {
+    background-color: #FFCC02;
+}
+
+.housing {
+    background-color: #63E4DD;
+}
+
+.poverty{
+    background-color: #6380E4
+}
+
+.women{
+    background-color: #F73E49;
+}
+
+.pollution{
+    background-color: #70EA5C;
+}
+
+.waste{
+    background-color: #C958D2;
+}
+
+.category-description{
+    margin-top:16px;
+    font-family: "Roboto Serif", serif;
+    font-size: 10px;
+    line-height: 140%;
+    max-width: 450px;
+    display: none;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+}
+
+.icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.caption-container{
+    padding-top: 24px;
+    order: 1;
+    font-family: "Roboto Mono", monospace;
+    font-size: 12px;
+    max-width: 430px;
+    line-height: 200%;
+    text-align: center;
+    
+}
+
+.tag{
+   font-family: "Roboto Mono", monospace;
+   font-size: 12px;
+   padding-top: 1px;
+   padding-bottom: 1px;
+   padding-right: 6px;
+   padding-left: 6px;
+   border-radius: 8px;
+}
+
+.metric-explainer{
+    display:none
+}
+
+.country-specific-type{
+    display: none;
+}
+
+.inner-paragraph{
+    margin-bottom: 8px;
+}
+
+.slidecontainer {
+    width: 50%;
+  }
+  
+  .slider {
+    margin-top: 8px;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 100px;
+    z-index: 0;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: #000000;
+    cursor: pointer;
+    z-index: 0;
+  }
+
+  .slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: #000000;
+    cursor: pointer;
+    z-index: 0;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+    z-index: 0;
+  }
+
+
+
