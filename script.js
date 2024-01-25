@@ -37,11 +37,12 @@ var colorB= 2
 // function to make a 2d array
 function new2darray (rows, cols){
   array =[]
-  for (x=0;x<rows; x++){
-    for (y=0;y<cols; y++){
+  for (x=0;x<cols; x++){
+    for (y=0;y<rows; y++){
       array.push([x,y])
     }
   }
+  console.log(array)
   return(array)
 }
 
@@ -391,7 +392,7 @@ for (x = 0; x<newshuffledarray.length; x++){
     p.strokeWeight(0);
 
     for (x = 0; x<newshuffledarray.length; x++){
-      p.rect(newshuffledarray[x][0]* xscale,newshuffledarray[x][1]* yscale,xscale, yscale)
+      p.rect(newshuffledarray[x][1]* xscale,newshuffledarray[x][0]* yscale,xscale, yscale)
         }
 
    } 
@@ -415,6 +416,13 @@ for (x = 0; x<newshuffledarray.length; x++){
     }
 
   }
+
+  // download
+  var savecount = 0
+  $(".download").click(function(){
+    p.saveCanvas(`pattern_${savecount}.jpg`);
+    savecount= savecount + 1
+  })
 
 };
 new p5(sketch, 'sketch-container');
