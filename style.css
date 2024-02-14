@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: Fakt;
-    src: url(/FaktStencil-Normal.otf);
+    src: url(FaktStencil-Normal.otf);
   }
 
   @font-face {
     font-family: Monument;
-    src: url(/monument-grotesk-regular\ 2.otf);
+    src: url(monument-grotesk-regular\ 2.otf);
   }
 
 #sketch-container{
